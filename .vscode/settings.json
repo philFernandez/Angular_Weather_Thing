@@ -1,0 +1,37 @@
+{
+    "debug.openExplorerOnEnd": true,
+    "editor.tabSize": 2,
+    "editor.rulers": [90],
+    "editor.autoIndent": "full",
+    "editor.cursorBlinking": "phase",
+    "editor.cursorStyle": "underline",
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": false,
+        "source.fixAll.tslint": true
+    },
+    "explorer.openEditors.visible": 0,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onFocusChange",
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+
+    // "html.autoClosingTags": false,
+    "peacock.affectActivityBar": false,
+    // "peacock.affectStatusBar": true,
+    "peacock.affectTitleBar": false,
+    "gitlens.menus": {
+        "editorGroup": false
+    },
+    "ng-evergreen.upgradeChannel": "Latest",
+    "workbench.colorCustomizations": {
+      "statusBar.background": "#dd0531",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#fa1b49"
+    },
+    "peacock.color": "#dd0531"
+}
