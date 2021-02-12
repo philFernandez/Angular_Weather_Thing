@@ -1,0 +1,10 @@
+div#outter {
+    background-color: tomato;
+    border-radius: 1rem;
+    border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 4px 3px 7px darkgrey;
+    width: 50%;
+    margin-left: 25%;
+    padding: 48px 0 48px 0;
+}
