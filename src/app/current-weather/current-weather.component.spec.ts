@@ -1,31 +1,38 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { ComponentFixture, inject, TestBed, waitForAsync } from "@angular/core/testing";
 import { CurrentWeatherComponent } from "./current-weather.component";
 import { WeatherService } from "../weather/weather.service";
 import { WeatherServiceFake } from "../weather/weather.service.fake";
+import { injectSpy } from "angular-unit-test-helper";
+import { of } from "rxjs";
 
 describe("CurrentWeatherComponent", () => {
     let component: CurrentWeatherComponent;
     let fixture: ComponentFixture<CurrentWeatherComponent>;
-
+    let weatherServiceMock: jasmine.SpyObj<WeatherService>;
     beforeEach(async () => {
-        await TestBed.configureTestingModule({
+        const weatherServiceSpy = jasmine.createSpyObj("WeatherService", [
+            "getCurrentWeather",
+        ]);
+        TestBed.configureTestingModule({
             declarations: [CurrentWeatherComponent],
             providers: [
                 {
                     provide: WeatherService,
-                    useClass: WeatherServiceFake,
+                    useValue: weatherServiceSpy,
                 },
             ],
         }).compileComponents();
+        weatherServiceMock = injectSpy(WeatherService);
     });
 
     beforeEach(() => {
         fixture = TestBed.createComponent(CurrentWeatherComponent);
         component = fixture.componentInstance;
-        fixture.detectChanges();
     });
 
     it("should create", () => {
+        weatherServiceMock.getCurrentWeather.and.returnValue(of());
+        fixture.detectChanges();
         expect(component).toBeTruthy();
     });
 });
