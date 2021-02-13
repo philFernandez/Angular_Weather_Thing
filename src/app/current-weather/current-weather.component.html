@@ -1,10 +1,10 @@
 <!-- if current is undefined -->
-<div id="outter" *ngIf="!current">
+<div *ngIf="!current">
     <span>Retrieving your forecast...</span>
 </div>
 
 <!-- if current is defined -->
-<div id="outter" *ngIf="current">
+<div *ngIf="current">
     <div>
         <span>{{current.city}}, {{current.country}} </span>
         <span>{{current.date | date:'fullDate'}}</span>
