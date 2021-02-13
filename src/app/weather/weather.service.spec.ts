@@ -1,8 +1,8 @@
-import { TestBed } from "@angular/core/testing";
-import { HttpClientTestingModule } from "@angular/common/http/testing";
-import { WeatherService } from "./weather.service";
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { WeatherService } from './weather.service';
 
-describe("WeatherService", () => {
+describe('WeatherService', () => {
     let service: WeatherService;
 
     beforeEach(() => {
@@ -12,7 +12,7 @@ describe("WeatherService", () => {
         service = TestBed.inject(WeatherService);
     });
 
-    it("should be created", () => {
+    it('should be created', () => {
         expect(service).toBeTruthy();
     });
 });

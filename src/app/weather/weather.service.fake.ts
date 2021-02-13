@@ -1,14 +1,14 @@
-import { Observable, of } from "rxjs";
-import { ICurrentWeather } from "../interfaces";
-import { IWeatherService } from "./weather.service";
+import { Observable, of } from 'rxjs';
+import { ICurrentWeather } from '../interfaces';
+import { IWeatherService } from './weather.service';
 
 export const fakeWeather: ICurrentWeather = {
-    city: "Sacramento",
-    country: "US",
+    city: 'Sacramento',
+    country: 'US',
     date: 1485789600,
-    image: "",
+    image: '',
     temperature: 280.32,
-    description: "Hellfire like storms",
+    description: 'Hellfire like storms',
 };
 
 export class WeatherServiceFake implements IWeatherService {
